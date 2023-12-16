@@ -1,0 +1,30 @@
+[alias]
+	co = checkout
+	st = status --show-stash
+	sw = switch
+[user]
+	email = 1664052+VeryBadFrags@users.noreply.github.com
+	name = VeryBadFrags
+[core]
+	excludesFile = ~/.gitignore_global
+	editor = nvim
+[pull]
+	rebase = true
+[push]
+	autoSetupRemote = true
+[pager]
+    diff = delta
+    log = delta
+    reflog = delta
+    show = delta
+[interactive]
+    diffFilter = delta --color-only --features=interactive
+
+[delta]
+    line-numbers = true
+	side-by-side = true
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true

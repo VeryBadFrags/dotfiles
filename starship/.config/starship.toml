@@ -1,0 +1,60 @@
+# Get editor completions based on the config schema
+"$schema" = 'https://starship.rs/config-schema.json'
+
+# Show  logo
+format = """
+\uF8FF \
+$all"""
+
+# Move items to the right
+right_format = """
+$nodejs\
+$cmd_duration\
+$time"""
+
+[battery]
+disabled = true
+
+[character]
+error_symbol = "[❯](bold #ff5555)" # Dracula
+success_symbol = "[\u276f](bold #50fa7b)" # Dracula + custom
+
+[cmd_duration]
+style = "bold #f1fa8c"
+format = '[$duration]($style) '
+
+[directory]
+style = "bold #50fa7b" # Dracula
+truncate_to_repo = false # Show entire path
+
+[git_branch]
+format = '[$symbol$branch(:$remote_branch) ]($style)'
+symbol = "\uF126"
+style = "bold #ff79c6"
+
+[git_status]
+format = '([\[$all_status$ahead_behind\]]($style) )'
+style = "#ff5555"
+
+[hostname]
+# format = "[]() in "
+style = "bold #bd93f9" # Dracula
+
+[line_break]
+disabled = true # Single-line prompt
+
+[nodejs]
+format = "[$symbol($version )]($style)" # Only show major Node version
+style = "bold #ffb86c"
+symbol = "\ue718" # Remove space
+version_format = "${major}"
+
+[time]
+disabled = false
+format = '[$time]($style)'
+use_12hr = true
+time_format = '%I:%M%p'
+
+[username]
+format = "[$user]($style) "
+style_user = "bold #8be9fd"
