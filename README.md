@@ -1,8 +1,8 @@
 # ⚙️ Dotfiles
 
-![OS macOS & Linux](https://img.shields.io/badge/OS-macOS_%7C_Linux-6272A4?labelColor=44475A)
-![Shell zsh](https://img.shields.io/badge/Shell-zsh-6272A4?labelColor=44475A)
-![Theme](https://img.shields.io/badge/Theme-🧛_Dracula-6272A4?labelColor=44475A)
+![OS macOS & Linux](https://img.shields.io/badge/os-macOS_%7C_Linux-6272A4?labelColor=44475A)
+![Shell zsh](https://img.shields.io/badge/shell-zsh-6272A4?labelColor=44475A)
+![Theme](https://img.shields.io/badge/theme-🧛_Dracula-6272A4?labelColor=44475A)
 [![MIT License](https://img.shields.io/github/license/verybadfrags/dotfiles?labelColor=44475A&color=6272A4)](LICENSE.txt)
 
 Personal Dotfiles managed with [Stow](https://www.gnu.org/software/stow/).
