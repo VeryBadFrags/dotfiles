@@ -32,9 +32,9 @@ fi
 
 # Node
 ## npm-check-updates - https://github.com/raineorshine/npm-check-updates
-alias ncu="npx npm-check-updates"
+alias ncu="pnpx npm-check-updates"
 ## Recusviely clean up node_modules/ - https://github.com/voidcosmos/npkill
-alias npkill="npx npkill"
+alias npkill="pnpx npkill"
 
 # APIs
 alias cht="curl cht.sh" # Cheat sheet
