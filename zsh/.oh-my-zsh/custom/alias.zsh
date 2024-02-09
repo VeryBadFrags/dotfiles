@@ -2,6 +2,7 @@
 
 alias gwatch="while true; do reset; git st; sleep 60; done"
 alias unzipall="find ./ -name \*.zip -exec unzip {} \;"
+alias dayofweek="date +%V"
 
 # bat - https://github.com/sharkdp/bat
 if [ "$(command -v bat)" ]; then
