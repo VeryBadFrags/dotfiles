@@ -27,6 +27,7 @@ fi
 # VSCode
 if [ "$(command -v code)" ]; then
     alias dotfilescfg="code ~/.dotfiles/"
+    alias macoscfg="code ~/workspace/macos/"
 else
     alias dotfilescfg="nvim ~/.dotfiles/"
 fi
