@@ -6,7 +6,6 @@ alias dayofweek="date +%V"
 
 # bat - https://github.com/sharkdp/bat
 if [ "$(command -v bat)" ]; then
-    alias cat="bat"
     export BAT_THEME="Dracula"
     # bat can be used as a colorizing pager for man, by setting the MANPAGER environment variable:
     export MANPAGER="sh -c 'col -bx | bat -l man -p'"
