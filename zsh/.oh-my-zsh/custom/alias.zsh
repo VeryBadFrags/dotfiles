@@ -41,6 +41,8 @@ alias npkill="pnpx npkill"
 alias cht="curl cht.sh" # Cheat sheet
 alias weather="curl \"https://wttr.in/?mn\""
 
+alias foldersize="du -h --max-depth=1 | sort -h"
+
 # Misc
 
 # Ramdisk script
