@@ -25,6 +25,7 @@ fi
 
 # Editor
 alias dotfilescfg="$VISUAL ~/.dotfiles/"
+alias privatedfcfg="$VISUAL ~/workspace/private-dotfiles/"
 alias macoscfg="$VISUAL ~/workspace/macos/"
 
 # Node
