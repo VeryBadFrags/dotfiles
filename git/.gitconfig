@@ -12,25 +12,10 @@
 	rebase = true
 [push]
 	autoSetupRemote = true
-[pager]
-    diff = delta
-    log = delta
-    reflog = delta
-    show = delta
-[interactive]
-    diffFilter = delta --color-only --features=interactive
 
-[delta]
-    line-numbers = true
-	side-by-side = true
-[filter "lfs"]
-	clean = git-lfs clean -- %f
-	smudge = git-lfs smudge -- %f
-	process = git-lfs filter-process
-	required = true
 [credential "https://github.com"]
-	helper = 
+	helper =
 	helper = !/opt/homebrew/bin/gh auth git-credential
 [credential "https://gist.github.com"]
-	helper = 
+	helper =
 	helper = !/opt/homebrew/bin/gh auth git-credential
