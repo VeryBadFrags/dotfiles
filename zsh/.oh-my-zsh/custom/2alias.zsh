@@ -23,13 +23,9 @@ else
     alias ll="ls -laFGh"
 fi
 
-# VSCode
-if [ "$(command -v zed)" ]; then
-    alias dotfilescfg="zed ~/.dotfiles/"
-    alias macoscfg="zed ~/workspace/macos/"
-else
-    alias dotfilescfg="nvim ~/.dotfiles/"
-fi
+# Editor
+alias dotfilescfg="$VISUAL ~/.dotfiles/"
+alias macoscfg="$VISUAL ~/workspace/macos/"
 
 # Node
 ## npm-check-updates - https://github.com/raineorshine/npm-check-updates

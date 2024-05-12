@@ -5,8 +5,10 @@ else
   export EDITOR='nvim'
 fi
 
-if [ "$(command -v mate)" ]; then
-   export VISUAL="mate"
+if [ "$(command -v zed)" ]; then
+  export VISUAL="zed"
+elif [ "$(command -v code)" ]; then
+  export VISUAL="code"
 fi
 
 # Some Brew tools are installed to /usr/local/sbin
