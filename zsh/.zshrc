@@ -80,6 +80,7 @@ zstyle ':omz:update' mode reminder  # just remind me to update when it's time
 plugins=(
     git
     nvm
+    zoxide
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -109,8 +110,6 @@ fi
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-
-eval "$(zoxide init --cmd z zsh)"
 
 setopt HIST_IGNORE_SPACE
 
