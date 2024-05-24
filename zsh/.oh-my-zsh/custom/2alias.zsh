@@ -2,7 +2,7 @@
 
 alias gwatch="while true; do reset; git st; sleep 60; done"
 alias unzipall="find ./ -name \*.zip -exec unzip {} \;"
-alias dayofweek="date +%V"
+alias weeknumber="date +%V"
 
 # bat - https://github.com/sharkdp/bat
 if [ "$(command -v bat)" ]; then
@@ -39,13 +39,3 @@ alias cht="curl cht.sh" # Cheat sheet
 alias weather="curl \"https://wttr.in/?mn\""
 
 alias foldersize="du -h --max-depth=1 | sort -h"
-
-# Misc
-
-# Ramdisk script
-# ramdisk=~/macos/ramdisk.sh
-# if [ -f $ramdisk ]; then
-#     alias ramdisk=$ramdisk
-# else
-#     unset ramdisk
-# fi
