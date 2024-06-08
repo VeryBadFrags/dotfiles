@@ -8,67 +8,67 @@ console_title_template = '{{ .Shell }} in {{ .Folder }}'
   type = 'prompt'
   alignment = 'left'
 
-  [[blocks.segments]]
-    type = "os"
-    style = "plain"
-    foreground = "white"
-    background = "transparent"
-    template = "{{ if .WSL }}WSL at {{ end }}{{.Icon}}"
+    [[blocks.segments]]
+        type = "os"
+        style = "plain"
+        foreground = "white"
+        background = "transparent"
+        template = "{{ if .WSL }}WSL at {{ end }}{{.Icon}}"
 
-    [properties]
-    macos = "mac"
+        [properties]
+        macos = "mac"
 
-  [[blocks.segments]]
-    type = 'path'
-    style = 'plain'
-    foreground = 'blue'
-    background = 'transparent'
-    template = '  {{ path .Path .Location }} '
+    [[blocks.segments]]
+        type = 'path'
+        style = 'plain'
+        foreground = 'blue'
+        background = 'transparent'
+        template = '  {{ path .Path .Location }} '
 
-    [blocks.segments.properties]
-      style = 'folder'
+        [blocks.segments.properties]
+        style = 'powerlevel'
+        max_width = 32
 
-  [[blocks.segments]]
-    type = "git"
-    style = "plain"
-    foreground = "lightCyan"
-    background = "transparent"
-    foreground_templates = [
-        # "{{ if or (.Working.Changed) (.Staging.Changed) }}lightGreen{{ end }}",
-        "{{ if and (gt .Ahead 0) (gt .Behind 0) }}lightRed{{ end }}",
-        "{{ if gt .Ahead 0 }}green{{ end }}",
-        "{{ if gt .Behind 0 }}red{{ end }}"
-    ]
-    template = "{{ .UpstreamIcon }}{{ .HEAD }}{{ if or (.Working.Changed) (.Staging.Changed) }}*{{ end }} <cyan>{{ if gt .Behind 0 }}⇣{{ end }}{{ if gt .Ahead 0 }}⇡{{ end }}</>"
-    # template = "{{ .UpstreamIcon }}{{ .HEAD }}{{if .BranchStatus }} {{ .BranchStatus }}{{ end }}{{ if .Working.Changed }}  {{ .Working.String }}{{ end }}{{ if and (.Working.Changed) (.Staging.Changed) }} |{{ end }}{{ if .Staging.Changed }}  {{ .Staging.String }}{{ end }}{{ if gt .StashCount 0 }}  {{ .StashCount }}{{ end }}"
+    [[blocks.segments]]
+        type = "git"
+        style = "plain"
+        foreground = "green"
+        background = "transparent"
+        foreground_templates = [
+            # "{{ if or (.Working.Changed) (.Staging.Changed) }}cyan{{ end }}",
+            "{{ if and (gt .Ahead 0) (gt .Behind 0) }}yellow{{ end }}",
+            "{{ if gt .Ahead 0 }}lightGreen{{ end }}",
+            "{{ if gt .Behind 0 }}red{{ end }}"
+        ]
+        template = "{{ .UpstreamIcon }}{{ .HEAD }}{{ if or (.Working.Changed) (.Staging.Changed) }}*{{ end }} <cyan>{{ if gt .Behind 0 }}⇣{{ end }}{{ if gt .Ahead 0 }}⇡{{ end }}</>"
+        # template = "{{ .UpstreamIcon }}{{ .HEAD }}{{if .BranchStatus }} {{ .BranchStatus }}{{ end }}{{ if .Working.Changed }}  {{ .Working.String }}{{ end }}{{ if and (.Working.Changed) (.Staging.Changed) }} |{{ end }}{{ if .Staging.Changed }}  {{ .Staging.String }}{{ end }}{{ if gt .StashCount 0 }}  {{ .StashCount }}{{ end }}"
 
-    [blocks.segments.properties]
-        branch_icon = ''
-        # commit_icon = '@'
-        fetch_status = true
-        fetch_upstream_icon = true
-        branch_max_length = 10
+        [blocks.segments.properties]
+            branch_icon = ''
+            # commit_icon = '@'
+            fetch_status = true
+            fetch_upstream_icon = true
+            branch_max_length = 10
 
-  [[blocks.segments]]
-    type = 'root'
-    style = 'plain'
-    foreground = 'white'
-    background = 'yellow'
-    template = '  '
+    [[blocks.segments]]
+        type = 'root'
+        style = 'plain'
+        foreground = 'white'
+        background = 'yellow'
+        template = '  '
+
+    [[blocks.segments]]
+        type = 'text'
+        style = 'plain'
+        foreground_templates = [
+        "{{if gt .Code 0}}red{{end}}",
+        "{{if eq .Code 0}}magenta{{end}}",
+        ]
+        background = 'transparent'
+        template = '❯'
 
 [[blocks]]
   type = 'rprompt'
-
-  [[blocks.segments]]
-    type = 'status'
-    style = 'plain'
-    foreground = 'green'
-    background = 'transparent'
-    foreground_templates = ['{{ if gt .Code 0 }}red{{ end }}']
-    template = ' {{ if gt .Code 0 }}{{ else }}{{ end }} '
-
-    [blocks.segments.properties]
-      always_enabled = true
 
   [[blocks.segments]]
     type = 'node'
