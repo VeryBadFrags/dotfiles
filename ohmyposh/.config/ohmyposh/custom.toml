@@ -1,0 +1,122 @@
+#:schema https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json
+
+version = 2
+final_space = true
+console_title_template = '{{ .Shell }} in {{ .Folder }}'
+
+[[blocks]]
+  type = 'prompt'
+  alignment = 'left'
+
+  [[blocks.segments]]
+    type = "os"
+    style = "plain"
+    foreground = "white"
+    background = "transparent"
+    template = "{{ if .WSL }}WSL at {{ end }}{{.Icon}}"
+
+    [properties]
+    macos = "mac"
+
+  [[blocks.segments]]
+    type = 'path'
+    style = 'plain'
+    foreground = 'blue'
+    background = 'transparent'
+    template = '  {{ path .Path .Location }} '
+
+    [blocks.segments.properties]
+      style = 'folder'
+
+  [[blocks.segments]]
+    type = "git"
+    style = "plain"
+    foreground = "lightCyan"
+    background = "transparent"
+    foreground_templates = [
+        # "{{ if or (.Working.Changed) (.Staging.Changed) }}lightGreen{{ end }}",
+        "{{ if and (gt .Ahead 0) (gt .Behind 0) }}lightRed{{ end }}",
+        "{{ if gt .Ahead 0 }}green{{ end }}",
+        "{{ if gt .Behind 0 }}red{{ end }}"
+    ]
+    template = "{{ .UpstreamIcon }}{{ .HEAD }}{{ if or (.Working.Changed) (.Staging.Changed) }}*{{ end }} <cyan>{{ if gt .Behind 0 }}⇣{{ end }}{{ if gt .Ahead 0 }}⇡{{ end }}</>"
+    # template = "{{ .UpstreamIcon }}{{ .HEAD }}{{if .BranchStatus }} {{ .BranchStatus }}{{ end }}{{ if .Working.Changed }}  {{ .Working.String }}{{ end }}{{ if and (.Working.Changed) (.Staging.Changed) }} |{{ end }}{{ if .Staging.Changed }}  {{ .Staging.String }}{{ end }}{{ if gt .StashCount 0 }}  {{ .StashCount }}{{ end }}"
+
+    [blocks.segments.properties]
+        branch_icon = ''
+        # commit_icon = '@'
+        fetch_status = true
+        fetch_upstream_icon = true
+        branch_max_length = 10
+
+  [[blocks.segments]]
+    type = 'root'
+    style = 'plain'
+    foreground = 'white'
+    background = 'yellow'
+    template = '  '
+
+[[blocks]]
+  type = 'rprompt'
+
+  [[blocks.segments]]
+    type = 'status'
+    style = 'plain'
+    foreground = 'green'
+    background = 'transparent'
+    foreground_templates = ['{{ if gt .Code 0 }}red{{ end }}']
+    template = ' {{ if gt .Code 0 }}{{ else }}{{ end }} '
+
+    [blocks.segments.properties]
+      always_enabled = true
+
+  [[blocks.segments]]
+    type = 'node'
+    style = 'plain'
+    foreground = 'green'
+    background = 'transparent'
+    template = ' '
+
+    [blocks.segments.properties]
+      display_mode = 'files'
+      fetch_package_manager = false
+      home_enabled = false
+
+  [[blocks.segments]]
+    type = 'go'
+    style = 'plain'
+    foreground = 'blue'
+    background = 'transparent'
+    template = ' '
+
+    [blocks.segments.properties]
+      fetch_version = false
+
+  [[blocks.segments]]
+    type = 'python'
+    style = 'plain'
+    foreground = 'yellow'
+    background = 'transparent'
+    template = ' '
+
+    [blocks.segments.properties]
+      display_mode = 'files'
+      fetch_version = false
+      fetch_virtual_env = false
+
+  [[blocks.segments]]
+    type = 'time'
+    style = 'plain'
+    foreground = 'white'
+    background = 'transparent'
+    template = '<blue><b>{{ .CurrentDate | date "15:04" }}</b></>'
+
+# [transient_prompt]
+#   foreground = 'black'
+#   background = 'transparent'
+#   template = '<yellow,transparent></><,p:yellow> {{ .Folder }} </><p:yellow,transparent></> '
+
+# [secondary_prompt]
+#   foreground = 'black'
+#   background = 'transparent'
+#   template = '<p:yellow,transparent></><,p:yellow> > </><p:yellow,transparent></> '

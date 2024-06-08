@@ -15,5 +15,5 @@ Replaces [Oh My Zsh](https://ohmyz.sh) (less config needed).
 
 ## 💅 Themes
 
-- [💪 Powerlevel10k](../p10k/README.md)
+- [Oh My Posh](https://ohmyposh.dev)
 - [🚀 Starship](../starship/README.md)
