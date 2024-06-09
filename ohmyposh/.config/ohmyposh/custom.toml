@@ -63,6 +63,7 @@ template = '❯'
 
 [[blocks]]
 type = 'rprompt'
+overflow = 'hidden'
 
 [[blocks.segments]]
 type = 'executiontime'
@@ -73,6 +74,7 @@ template = '󱦟 {{ .FormattedMs }} '
 
 [blocks.segments.properties]
 threshold = 5000
+style = 'round'
 
 [[blocks.segments]]
 type = 'node'
