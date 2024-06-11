@@ -43,7 +43,6 @@ branch_icon = ''
 commit_icon = '@'
 fetch_status = true
 fetch_upstream_icon = true
-branch_max_length = 10
 
 [[blocks.segments]]
 type = 'root'
