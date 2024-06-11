@@ -21,9 +21,10 @@ macos = "mac"
 [[blocks.segments]]
 type = 'path'
 style = 'plain'
-foreground = 'blue'
+foreground = 'lightBlue'
 background = 'transparent'
 template = '  {{ path .Path .Location }} '
+# 
 
 [blocks.segments.properties]
 style = 'powerlevel'
@@ -34,7 +35,7 @@ type = "git"
 style = "plain"
 foreground = "green"
 background = "transparent"
-template = "{{ .UpstreamIcon }}{{ .HEAD }}{{ if or (.Working.Changed) (.Staging.Changed) }}*{{ end }} <cyan>{{ if gt .Behind 0 }}⇣{{ end }}{{ if gt .Ahead 0 }}⇡{{ end }} </>"
+template = "{{ .UpstreamIcon }}{{ .HEAD }}{{ if or (.Working.Changed) (.Staging.Changed) }}*{{ end }}<cyan>{{ if gt .Behind 0 }}⇣{{ end }}{{ if gt .Ahead 0 }}⇡{{ end }} </>"
 # template = "{{ .UpstreamIcon }}{{ .HEAD }}{{if .BranchStatus }} {{ .BranchStatus }}{{ end }}{{ if .Working.Changed }}  {{ .Working.String }}{{ end }}{{ if and (.Working.Changed) (.Staging.Changed) }} |{{ end }}{{ if .Staging.Changed }}  {{ .Staging.String }}{{ end }}{{ if gt .StashCount 0 }}  {{ .StashCount }}{{ end }}"
 
 [blocks.segments.properties]
@@ -113,7 +114,7 @@ fetch_virtual_env = false
 [[blocks.segments]]
 type = 'time'
 style = 'plain'
-foreground = 'blue'
+foreground = 'black'
 background = 'transparent'
 template = '<b> {{ .CurrentDate | date "15:04" }}</b>'
 
