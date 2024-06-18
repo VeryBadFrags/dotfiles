@@ -1,60 +1,111 @@
 # Get editor completions based on the config schema
 "$schema" = 'https://starship.rs/config-schema.json'
 
-# Show  logo
-format = """
-\uF8FF \
-$all"""
+# Inserts a blank line between shell prompts
+add_newline = true
 
-# Move items to the right
-right_format = """
-$nodejs\
+# Define the important modules on the left
+format = """\
+$os\
+$directory\
+$git_branch\
+$git_commit\
+$git_state\
+$git_metrics\
+$git_status\
+$line_break\
+$character\
+"""
+
+# Move the other modules to the right
+right_format = """\
 $cmd_duration\
-$time"""
-
-[battery]
-disabled = true
-
-[character]
-error_symbol = "[❯](bold #ff5555)" # Dracula
-success_symbol = "[\u276f](bold #50fa7b)" # Dracula + custom
-
-[cmd_duration]
-style = "bold #f1fa8c"
-format = '[$duration]($style) '
-
-[directory]
-style = "bold #50fa7b" # Dracula
-truncate_to_repo = false # Show entire path
-
-[git_branch]
-format = '[$symbol$branch(:$remote_branch) ]($style)'
-symbol = "\uF126"
-style = "bold #ff79c6"
-
-[git_status]
-format = '([\[$all_status$ahead_behind\]]($style) )'
-style = "#ff5555"
-
-[hostname]
-# format = "[]() in "
-style = "bold #bd93f9" # Dracula
+$all\
+"""
 
 [line_break]
-disabled = true # Single-line prompt
+disabled = true
+
+[os]
+disabled = false
+[os.symbols]
+Macos = " "
+
+[directory]
+before_repo_root_style = 'underline dimmed blue'
+repo_root_style = 'underline blue'
+style = 'underline blue'
+truncation_length = 6
+truncation_symbol = '../'
+truncate_to_repo = false
+format = '[ $path]($style)[$read_only]($read_only_style) '
+
+[git_branch]
+symbol = ''
+style = 'green'
+format = '[$symbol$branch(:$remote_branch)]($style) '
+
+[git_status]
+stashed = '${count}'
+modified = '!${count}'
+staged = '+${count}'
+untracked = '${count}'
+ahead = '⇡${count}'
+behind = '⇣${count}'
+style = 'green'
+format = '([$all_status$ahead_behind]($style) )'
+
+[cmd_duration]
+show_notifications = false
+style = 'dimmed cyan'
+format = '[󱦟 $duration]($style) '
+
+[golang]
+symbol = " "
+
+[kubernetes]
+disabled = true
+detect_files = ['values.yml']
+symbol = '☸ '
+style = 'dimmed purple'
+format = '[$symbol$context( \($namespace\))]($style) '
+
+[helm]
+style = 'dimmed white'
+format = '[$symbol($version )]($style)'
+
+[package]
+disabled = true
+symbol = "󰏗 "
+style = 'dimmed yellow'
+format = '[$symbol$version]($style) '
+
+[java]
+symbol = " "
+style = 'cyan'
+format = '[$symbol]($style)'
 
 [nodejs]
-format = "[$symbol($version )]($style)" # Only show major Node version
-style = "bold #ffb86c"
-symbol = "\ue718" # Remove space
-version_format = "${major}"
+symbol = " "
+format = '[$symbol]($style)'
+
+[python]
+symbol = " "
+format = "[${symbol}${pyenv_prefix}(${version} )(\\($virtualenv\\) )]($style)"
+
+[scala]
+symbol = " "
+style = 'red'
+format = '[$symbol]($style)'
+
+[battery]
+disabled = false
+[[battery.display]]
+threshold = 50
+style = 'dimmed purple'
 
 [time]
 disabled = false
-format = '[$time]($style)'
-use_12hr = true
-time_format = '%I:%M%p'
-
-[username]
-format = "[$user]($style) "
-style_user = "bold #8be9fd"
+time_format = '%I:%M %p'
+style = 'dimmed white'
+format = '[ $time]($style) '

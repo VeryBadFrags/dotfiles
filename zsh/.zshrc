@@ -106,9 +106,4 @@ fi
 
 setopt HIST_IGNORE_SPACE
 
-if [ "$TERM_PROGRAM" != "Apple_Terminal" ]; then
-  # eval "$(oh-my-posh init zsh --config $(brew --prefix oh-my-posh)/themes/powerlevel10k_lean.omp.json)"
-  eval "$(oh-my-posh init zsh --config $HOME/.config/ohmyposh/custom.toml)"
-fi
-
-# eval "$(starship init zsh)"
+eval "$(starship init zsh)"
