@@ -17,7 +17,7 @@ $line_break\
 $character\
 """
 
-# Move the other modules to the right
+# Move the rest to the right
 right_format = """\
 $cmd_duration\
 $all\
@@ -46,8 +46,11 @@ style = 'green'
 format = '[$symbol$branch(:$remote_branch)]($style) '
 
 [git_status]
+conflicted = '${count}'
 stashed = '${count}'
 modified = '!${count}'
+deleted = '✘${count}'
+renamed = '»${count}'
 staged = '+${count}'
 untracked = '${count}'
 ahead = '⇡${count}'
