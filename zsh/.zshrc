@@ -106,4 +106,7 @@ fi
 
 setopt HIST_IGNORE_SPACE
 
+# Atuin - Bind ctrl-r but not up arrow
+eval "$(atuin init zsh --disable-up-arrow)"
+
 eval "$(starship init zsh)"
