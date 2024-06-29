@@ -1,8 +1,10 @@
-# For a full list of active aliases, run `alias`
+# For a full list of active aliases, run 'alias'
 
+alias foldersize="du -h --max-depth=1 | sort -h"
 alias gwatch="while true; do reset; git st; sleep 60; done"
 alias unzipall="find ./ -name \*.zip -exec unzip {} \;"
 alias weeknumber="date +%V"
+alias zshbench="time zsh -i -c exit"
 
 # bat - https://github.com/sharkdp/bat
 if [ "$(command -v bat)" ]; then
@@ -37,5 +39,3 @@ alias npkill="pnpx npkill"
 # APIs
 alias cht="curl cht.sh" # Cheat sheet
 alias weather="curl \"https://wttr.in/?mn\""
-
-alias foldersize="du -h --max-depth=1 | sort -h"
