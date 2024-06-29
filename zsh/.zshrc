@@ -26,7 +26,9 @@ zinit ice as"command" from"gh-r" \
 zinit light starship/starship
 
 # Atuin - Bind ctrl-r but not up arrow
-# eval "$(atuin init zsh --disable-up-arrow)"
+if [ "$(command -v atuin)" ]; then
+  eval "$(atuin init zsh --disable-up-arrow)"
+fi
 
 source ~/.dotfiles/zsh/custom/1env.zsh
 source ~/.dotfiles/zsh/custom/2alias.zsh
