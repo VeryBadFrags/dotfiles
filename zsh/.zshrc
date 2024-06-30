@@ -12,7 +12,7 @@ zinit snippet OMZL::key-bindings.zsh
 # OMZ/plugins/
 zinit ice wait lucid
 zinit snippet OMZP::nvm
-# zinit snippet OMZP::zoxide # not needed
+zinit snippet OMZP::zoxide
 
 # Brew completions (before compinit)
 if type brew &>/dev/null; then
