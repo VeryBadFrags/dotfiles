@@ -42,7 +42,7 @@ format = '[ $path]($style)[$read_only]($read_only_style) '
 
 [git_branch]
 symbol = ''
-style = 'bold yellow'
+style = 'dimmed yellow'
 format = '[$symbol$branch(:$remote_branch)]($style) '
 
 [git_status]
@@ -55,7 +55,7 @@ staged = '+${count}'
 untracked = '${count}'
 ahead = '⇡${count}'
 behind = '⇣${count}'
-style = 'bold yellow'
+style = 'yellow'
 format = '([$all_status$ahead_behind]($style) )'
 
 [cmd_duration]
