@@ -19,8 +19,8 @@ fi
 if [ "$(command -v eza)" ]; then
     unalias -m 'll'
     #alias ls='exa -G --color auto'
-    alias ll="eza -la --git --icons"
-    alias tree="eza -T --icons"
+    alias ll="eza -la --git --icons=always"
+    alias tree="eza -T --icons=always"
 else
     alias ll="ls -laFGh"
 fi
