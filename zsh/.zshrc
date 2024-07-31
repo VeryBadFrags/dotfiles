@@ -32,6 +32,7 @@ fi
 
 source ~/.dotfiles/zsh/custom/1env.zsh
 source ~/.dotfiles/zsh/custom/2alias.zsh
+source ~/servers.zsh
 
 # Keep at the end
 zi for \
