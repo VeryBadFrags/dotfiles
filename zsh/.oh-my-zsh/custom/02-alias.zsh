@@ -1,7 +1,7 @@
 # For a full list of active aliases, run 'alias'
 
-alias foldersize="du -h --max-depth=1 | sort -h"
-alias gwatch="while true; do reset; git st; sleep 60; done"
+alias foldersize="du -h -d 1 | sort -h"
+alias gitwatch="while true; do reset; git st; sleep 60; done"
 alias unzipall="find ./ -name \*.zip -exec unzip {} \;"
 alias weeknumber="date +%V"
 alias zshbench="time zsh -i -c exit"
@@ -12,6 +12,7 @@ if [ "$(command -v bat)" ]; then
     # bat can be used as a colorizing pager for man, by setting the MANPAGER environment variable:
     export MANPAGER="sh -c 'col -bx | bat -l man -p'"
 elif [ "$(command -v batcat)" ]; then
+    # Bat is called batcat on Debian
     alias bat="batcat"
 fi
 
