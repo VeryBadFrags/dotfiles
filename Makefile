@@ -15,4 +15,5 @@ nvim:
 
 .PHONY: zsh
 zsh:
+	mkdir -p ${ZSH_CUSTOM}
 	stow zsh

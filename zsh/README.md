@@ -1,7 +1,7 @@
 # zsh
 
 ```sh
-stow zsh
+make zsh
 ```
 
 ## 🛠️ Framework
