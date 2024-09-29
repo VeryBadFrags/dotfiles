@@ -5,7 +5,7 @@
 add_newline = true
 
 # Define the important modules on the left
-format = """\
+format = """
 $os\
 $directory\
 $git_branch\
@@ -14,17 +14,20 @@ $git_state\
 $git_metrics\
 $git_status\
 $line_break\
-$character\
-"""
-
-# Move the rest to the right
-right_format = """\
+$fill\
 $cmd_duration\
-$all\
+$all
+$character
 """
 
+# The line break is already specified in the format
 [line_break]
 disabled = true
+
+[fill]
+symbol = ' '
+
+# Left side
 
 [os]
 disabled = false
@@ -43,7 +46,7 @@ format = '[ $path]($style)[$read_only]($read_only_style) '
 [git_branch]
 symbol = ''
 style = 'bold cyan'
-format = '[$symbol$branch(:$remote_branch)]($style) '
+format = '[\[$symbol$branch(:$remote_branch)\]]($style) '
 
 [git_status]
 conflicted = '${count}'
@@ -58,24 +61,52 @@ behind = '⇣${count}'
 style = 'bold cyan'
 format = '([$all_status$ahead_behind]($style) )'
 
+# Right side
+
+[aws]
+symbol = '󰸏 '
+format = '[$symbol($profile )(\($region\) )(\[$duration\] )]($style)'
+
+[battery]
+disabled = false
+[[battery.display]]
+threshold = 70
+style = 'dimmed purple'
+
 [cmd_duration]
+disabled = false
+min_time = 10000
 show_notifications = false
 style = 'dimmed cyan'
-format = '[󱦟 $duration]($style) '
+format = '[󱦟$duration]($style) '
 
 [golang]
 symbol = " "
 
+[helm]
+style = 'dimmed purple'
+format = '[$symbol($version )]($style)'
+
+[java]
+symbol = " "
+style = 'cyan'
+format = '[$symbol]($style)'
+
 [kubernetes]
 disabled = true
-detect_files = ['values.yml']
+detect_folders = ['helm']
+detect_files = ['values-local.yaml', 'values-dev.yaml']
 symbol = '☸ '
 style = 'dimmed purple'
 format = '[$symbol$context( \($namespace\))]($style) '
 
-[helm]
-style = 'dimmed white'
-format = '[$symbol($version )]($style)'
+[nix_shell]
+format = '[$symbol$state( \($name\))]($style) '
+symbol = '󱄅'
+
+[nodejs]
+symbol = " "
+format = '[$symbol]($style)'
 
 [package]
 disabled = true
@@ -83,32 +114,26 @@ symbol = "󰏗 "
 style = 'dimmed yellow'
 format = '[$symbol$version]($style) '
 
-[java]
-symbol = " "
-style = 'cyan'
-format = '[$symbol]($style)'
-
-[nodejs]
-symbol = " "
-format = '[$symbol]($style)'
-
 [python]
 symbol = " "
 format = "[${symbol}${pyenv_prefix}(${version} )(\\($virtualenv\\) )]($style)"
 
+[ruby]
+symbol = '󰴭 '
+format = '[$symbol($version )]($style)'
+
 [scala]
-symbol = " "
+symbol = ' '
 style = 'red'
 format = '[$symbol]($style)'
 
-[battery]
-disabled = false
-[[battery.display]]
-threshold = 50
-style = 'dimmed purple'
+[terraform]
+symbol = '󱁢 '
+format = '[$symbol$workspace]($style) '
+detect_files = ['Terrafile']
 
 [time]
 disabled = false
 time_format = '%I:%M %p'
 style = 'dimmed white'
-format = '[ $time]($style) '
+format = '[ $time]($style)'
