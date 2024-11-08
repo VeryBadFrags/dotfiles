@@ -30,6 +30,7 @@ export ZSH_CUSTOM=~/.config/zsh-custom
 plugins=(
   git
   nvm
+  starship # https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/starship
   zoxide
   )
 
@@ -41,9 +42,6 @@ source $ZSH/oh-my-zsh.sh
 if [ "$(command -v atuin)" ]; then
   eval "$(atuin init zsh --disable-up-arrow)"
 fi
-
-# Starship - https://starship.rs
-eval "$(starship init zsh)"
 
 # zsh-syntax-highlighting - https://github.com/zsh-users/zsh-syntax-highlighting
 source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
