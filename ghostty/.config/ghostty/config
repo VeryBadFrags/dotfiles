@@ -1,0 +1,7 @@
+# https://ghostty.org/docs/config/reference
+
+font-size = 18
+theme = catppuccin-macchiato
+
+# Remove close confirmation prompt
+confirm-close-surface = false
