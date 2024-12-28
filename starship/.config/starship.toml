@@ -80,7 +80,7 @@ style = 'dimmed cyan'
 format = '[󱦟$duration]($style) '
 
 [deno]
-symbol = '🦕 '
+symbol = ' '
 format = '[$symbol($version )]($style)'
 
 [golang]
