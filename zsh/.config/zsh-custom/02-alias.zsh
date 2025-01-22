@@ -2,6 +2,7 @@
 
 alias foldersize="du -h -d 1 | sort -h"
 alias gitwatch="while true; do reset; git st; sleep 60; done"
+alias lg="lazygit"
 alias unzipall="find ./ -name \*.zip -exec unzip {} \;"
 alias weeknumber="date +%V"
 alias zshbench="time zsh -i -c exit"
