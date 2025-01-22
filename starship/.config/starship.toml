@@ -31,7 +31,7 @@ symbol = ' '
 [os]
 disabled = false
 [os.symbols]
-Macos = ' '
+Macos = ' '
 
 [directory]
 before_repo_root_style = 'underline dimmed blue'
