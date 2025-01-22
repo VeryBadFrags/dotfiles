@@ -1,6 +1,7 @@
 # https://ghostty.org/docs/config/reference
 
 font-size = 18
+font-family = Hack Nerd Font
 theme = catppuccin-macchiato
 
 # Remove close confirmation prompt
