@@ -12,7 +12,7 @@ Personal Dotfiles managed with [Stow](https://www.gnu.org/software/stow/).
 Clone the project
 
 ```sh
-git clone git@github.com:VeryBadFrags/dotfiles.git ~/.dotfiles
+git clone https://github.com/VeryBadFrags/dotfiles.git ~/.dotfiles
 ```
 
 Create symbolic links for any package
