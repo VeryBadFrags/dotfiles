@@ -31,7 +31,7 @@ symbol = ' '
 [os]
 disabled = false
 [os.symbols]
-Macos = ' '
+Macos = " "
 
 [directory]
 before_repo_root_style = 'underline dimmed blue'
@@ -84,19 +84,23 @@ symbol = ' '
 format = '[$symbol($version )]($style)'
 
 [golang]
-symbol = ' '
+symbol = " "
+
+[gradle]
+format = '[$symbol($version )]($style)'
+symbol = ' '
 
 [helm]
 style = 'dimmed purple'
 format = '[$symbol($version )]($style)'
 
 [java]
-symbol = ' '
+symbol = " "
 style = 'cyan'
 format = '[$symbol]($style)'
 
 [kubernetes]
-disabled = true
+disabled = false
 detect_folders = ['helm']
 detect_files = ['values-local.yaml', 'values-dev.yaml']
 symbol = '☸ '
@@ -108,18 +112,19 @@ format = '[$symbol$state( \($name\))]($style) '
 symbol = '󱄅'
 
 [nodejs]
-symbol = ' '
+symbol = " "
 format = '[$symbol]($style)'
 
 [package]
 disabled = true
-symbol = '󰏗 '
+symbol = "󰏗 "
 style = 'dimmed yellow'
 format = '[$symbol$version]($style) '
 
 [python]
-symbol = ' '
-format = '[${symbol}${pyenv_prefix}(${version} )(\\($virtualenv\\) )]($style)'
+disabled = true
+symbol = " "
+format = "[${symbol}${pyenv_prefix}(${version} )(\\($virtualenv\\) )]($style)"
 
 [ruby]
 symbol = '󰴭 '
