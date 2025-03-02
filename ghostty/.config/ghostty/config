@@ -6,3 +6,6 @@ theme = catppuccin-macchiato
 
 # Remove close confirmation prompt
 confirm-close-surface = false
+
+# Show/Hide Quake terminal
+keybind = global:option+space=toggle_quick_terminal
