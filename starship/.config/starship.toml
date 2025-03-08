@@ -31,7 +31,7 @@ symbol = ' '
 [os]
 disabled = false
 [os.symbols]
-Macos = " "
+Macos = ' '
 
 [directory]
 before_repo_root_style = 'underline dimmed blue'
@@ -84,7 +84,7 @@ symbol = ' '
 format = '[$symbol($version )]($style)'
 
 [golang]
-symbol = " "
+symbol = ' '
 
 [gradle]
 format = '[$symbol($version )]($style)'
@@ -95,9 +95,10 @@ style = 'dimmed purple'
 format = '[$symbol($version )]($style)'
 
 [java]
-symbol = " "
+symbol = ' '
 style = 'cyan'
-format = '[$symbol]($style)'
+format = '[$symbol($version )]($style)'
+version_format = 'v${major}'
 
 [kubernetes]
 disabled = false
@@ -112,18 +113,18 @@ format = '[$symbol$state( \($name\))]($style) '
 symbol = '󱄅'
 
 [nodejs]
-symbol = " "
+symbol = ' '
 format = '[$symbol]($style)'
 
 [package]
 disabled = true
-symbol = "󰏗 "
+symbol = '󰏗 '
 style = 'dimmed yellow'
 format = '[$symbol$version]($style) '
 
 [python]
 disabled = true
-symbol = " "
+symbol = ' '
 format = "[${symbol}${pyenv_prefix}(${version} )(\\($virtualenv\\) )]($style)"
 
 [ruby]
@@ -133,7 +134,8 @@ format = '[$symbol($version )]($style)'
 [scala]
 symbol = ' '
 style = 'red'
-format = '[$symbol]($style)'
+format = '[$symbol(${version} )]($style)'
+version_format = 'v${major}.${minor}'
 
 [terraform]
 symbol = '󱁢 '
