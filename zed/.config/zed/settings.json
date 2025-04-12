@@ -8,13 +8,24 @@
 // from the command palette
 {
   // "ui_font_size": 16,
+  "features": {
+    "edit_prediction_provider": "zed"
+  },
   "buffer_font_size": 17,
   "buffer_font_family": "Fira Code",
   "buffer_font_fallbacks": ["Hack Nerd Font", "Zed Plex Mono"],
   "terminal": { "font_family": "Hack Nerd Font" },
   "theme": {
     "mode": "system",
+<<<<<<< HEAD
     "light": "Catppuccin Macchiato",
     "dark": "Catppuccin Mocha"
+||||||| parent of 53b4de2 (Move global gitignore)
+    "light": "Catppuccin Macchiato",
+    "dark": "One Dark"
+=======
+    "light": "Catppuccin Frappé",
+    "dark": "One Dark"
+>>>>>>> 53b4de2 (Move global gitignore)
   }
 }

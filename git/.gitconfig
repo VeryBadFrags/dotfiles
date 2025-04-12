@@ -6,7 +6,7 @@
 	email = 1664052+VeryBadFrags@users.noreply.github.com
 	name = VeryBadFrags
 [core]
-	excludesFile = ~/.gitignore_global
+	excludesFile = ~/.config/.gitignore_global
 	editor = nvim
 	pager = delta
 [pull]
