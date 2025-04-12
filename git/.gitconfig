@@ -9,6 +9,8 @@
 	excludesFile = ~/.config/.gitignore_global
 	editor = nvim
 	pager = delta
+[fetch]
+	prune = true
 [pull]
 	rebase = true
 [push]
