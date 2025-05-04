@@ -22,6 +22,9 @@ zstyle ':omz:update' mode disabled  # disable automatic updates
 # Would you like to use another custom folder than $ZSH/custom?
 export ZSH_CUSTOM=~/.config/zsh-custom
 
+# Lazy startup for nvm
+zstyle ':omz:plugins:nvm' lazy yes
+
 # Which plugins would you like to load?
 # Standard plugins can be found in $ZSH/plugins/
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
