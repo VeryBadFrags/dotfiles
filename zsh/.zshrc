@@ -31,6 +31,7 @@ zstyle ':omz:plugins:nvm' lazy yes
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
+  direnv
   git
   nvm
   starship # https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/starship
