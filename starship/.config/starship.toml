@@ -69,7 +69,7 @@ format = '[$symbol($profile )(\($region\) )(\[$duration\] )]($style)'
 [battery]
 disabled = false
 [[battery.display]]
-threshold = 70
+threshold = 25
 style = 'dimmed purple'
 
 [cmd_duration]
