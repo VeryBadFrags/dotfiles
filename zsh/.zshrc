@@ -33,7 +33,7 @@ zstyle ':omz:plugins:nvm' lazy yes
 plugins=(
   direnv
   git
-  nvm
+  mise
   starship # https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/starship
   zoxide
   )
