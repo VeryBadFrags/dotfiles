@@ -148,6 +148,6 @@ detect_files = ['Terrafile']
 
 [time]
 disabled = false
-time_format = '%I:%M %p'
+time_format = '%I:%M%p'
 style = 'dimmed white'
 format = '[ $time]($style)'
