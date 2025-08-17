@@ -7,8 +7,8 @@ else
   export EDITOR='hx'
 fi
 
-if [ "$(command -v code)" ]; then
-  export VISUAL="code"
-elif [ "$(command -v zed)" ]; then
+if [ "$(command -v zed)" ]; then
   export VISUAL="zed"
+elif [ "$(command -v code)" ]; then
+  export VISUAL="code"
 fi
