@@ -7,7 +7,7 @@
 	name = VeryBadFrags
 [core]
 	excludesFile = ~/.config/.gitignore_global
-	editor = nvim
+	editor = hx
 	pager = delta
 [fetch]
 	prune = true
