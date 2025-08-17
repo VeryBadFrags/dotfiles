@@ -4,7 +4,7 @@ export XDG_CONFIG_HOME="$HOME/.config"
 if [[ -n $SSH_CONNECTION ]]; then
   export EDITOR='vim'
 else
-  export EDITOR='nvim'
+  export EDITOR='hx'
 fi
 
 if [ "$(command -v code)" ]; then
