@@ -22,9 +22,6 @@ zstyle ':omz:update' mode disabled  # disable automatic updates
 # Would you like to use another custom folder than $ZSH/custom?
 export ZSH_CUSTOM=~/.config/zsh-custom
 
-# Lazy startup for nvm
-zstyle ':omz:plugins:nvm' lazy yes
-
 # Which plugins would you like to load?
 # Standard plugins can be found in $ZSH/plugins/
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
@@ -42,7 +39,10 @@ source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
-# Atuin - Bind ctrl-r but not up arrow - https://github.com/atuinsh/atuin
+# Atuin
 if [ "$(command -v atuin)" ]; then
+  # Bind ctrl-r but not up arrow
   eval "$(atuin init zsh --disable-up-arrow)"
+else
+  echo "atuin not found - See https://github.com/atuinsh/atuin"
 fi
