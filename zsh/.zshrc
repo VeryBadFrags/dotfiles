@@ -40,10 +40,19 @@ source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
-# Atuin
+# Atuin - https://atuin.sh
 if [ "$(command -v atuin)" ]; then
   # Bind ctrl-r but not up arrow
   eval "$(atuin init zsh --disable-up-arrow)"
 else
   echo "atuin not found - See https://github.com/atuinsh/atuin"
+fi
+
+# Carapace - https://carapace-sh.github.io/carapace-bin/setup.html#zsh
+if [ "$(command -v carapace)" ]; then
+  export CARAPACE_BRIDGES='zsh,fish,bash,inshellisense' # optional
+  zstyle ':completion:*' format $'\e[2;37mCompleting %d\e[m'
+  source <(carapace _carapace)
+else
+  echo "carapace not found"
 fi
