@@ -29,6 +29,7 @@ export ZSH_CUSTOM=~/.config/zsh-custom
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
   git # https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/git
+  macos # https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/macos
   mise # https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/mise
   starship # https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/starship
   zoxide # https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/zoxide
