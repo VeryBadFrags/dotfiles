@@ -31,10 +31,11 @@ zstyle ':omz:plugins:nvm' lazy yes
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
-  git
-  mise
+  git # https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/git
+  mise # https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/mise
   starship # https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/starship
-  zoxide
+  zoxide # https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/zoxide
+  zsh-syntax-highlighting # https://github.com/zsh-users/zsh-syntax-highlighting/blob/master/INSTALL.md#oh-my-zsh
   )
 
 source $ZSH/oh-my-zsh.sh
@@ -45,6 +46,3 @@ source $ZSH/oh-my-zsh.sh
 if [ "$(command -v atuin)" ]; then
   eval "$(atuin init zsh --disable-up-arrow)"
 fi
-
-# zsh-syntax-highlighting - https://github.com/zsh-users/zsh-syntax-highlighting
-source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
