@@ -41,3 +41,6 @@ alias npkill="pnpx npkill"
 # APIs
 alias cht="curl cht.sh" # Cheat sheet
 alias weather="curl \"https://wttr.in/?mn\""
+
+# Other
+alias vidinterm="mpv --really-quiet --vo=tct --vo-tct-buffering=frame"
