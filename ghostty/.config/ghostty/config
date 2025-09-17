@@ -2,7 +2,7 @@
 
 font-size = 18
 font-family = Hack Nerd Font
-theme = catppuccin-macchiato
+theme = Catppuccin Macchiato
 
 # Remove close confirmation prompt
 confirm-close-surface = false
