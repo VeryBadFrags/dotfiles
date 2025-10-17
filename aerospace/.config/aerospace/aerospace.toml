@@ -202,8 +202,59 @@ automatically-unhide-macos-hidden-apps = false
     up = 'volume up'
     shift-down = ['volume set 0', 'mode main']
 
-## Custom
+##########
+# Custom #
+##########
 
+# Get app id:
+# osascript -e 'id of app "App name"'
+
+# Finder
 [[on-window-detected]]
     if. app-name-regex-substring = 'finder'
     run = 'layout floating'
+
+# Safari
+[[on-window-detected]]
+    if.app-id = 'com.apple.Safari'
+    if.during-aerospace-startup = true
+    run = ['move-node-to-workspace 1']
+
+# VS Code
+[[on-window-detected]]
+    if.app-id = 'com.microsoft.VSCode'
+    if.during-aerospace-startup = true
+    run = ['move-node-to-workspace 2']
+
+# Zed
+[[on-window-detected]]
+    if.app-id = 'dev.zed.Zed'
+    if.during-aerospace-startup = true
+    run = ['move-node-to-workspace 2']
+
+# Messages
+[[on-window-detected]]
+    if.app-id = 'com.apple.MobileSMS'
+    if.during-aerospace-startup = true
+    run = ['move-node-to-workspace 3']
+
+# Discord
+[[on-window-detected]]
+    if.app-id = 'com.hnc.Discord'
+    if.during-aerospace-startup = true
+    run = ['move-node-to-workspace 3']
+
+# Mail
+[[on-window-detected]]
+    if.app-id = 'com.apple.mail'
+    run = ['move-node-to-workspace M']
+
+# Obsidian
+[[on-window-detected]]
+    if.app-id = 'md.obsidian'
+    run = ['move-node-to-workspace O']
+
+# Music
+[[on-window-detected]]
+    if.app-id = 'com.apple.Music'
+    run = ['move-node-to-workspace P']
