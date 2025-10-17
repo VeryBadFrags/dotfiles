@@ -1,0 +1,14 @@
+#!/bin/bash
+
+# JankyBorders https://github.com/FelixKratz/JankyBorders
+# Colors       https://catppuccin.com/palette/
+
+options=(
+	style=round
+	width=3.0
+	hidpi=on
+	active_color=0xff89dceb # Catppuccin Mocha Sky
+	inactive_color=0x807f849c # Catppuccin Mocha Overlay 1
+)
+
+borders "${options[@]}"
