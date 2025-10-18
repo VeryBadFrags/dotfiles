@@ -7,6 +7,8 @@ add_newline = true
 # Define the important modules on the left
 format = """
 $os\
+$username\
+$hostname\
 $directory\
 $git_branch\
 $git_commit\
@@ -32,6 +34,13 @@ symbol = ' '
 disabled = false
 [os.symbols]
 Macos = ' '
+
+[username]
+format = '[$user]($style)@'
+
+[hostname]
+ssh_symbol = ''
+format = '[$ssh_symbol$hostname]($style) '
 
 [directory]
 before_repo_root_style = 'underline dimmed blue'
