@@ -211,7 +211,12 @@ automatically-unhide-macos-hidden-apps = false
 
 # Finder
 [[on-window-detected]]
-    if. app-name-regex-substring = 'finder'
+    if.app-id = 'com.apple.finder'
+    run = 'layout floating'
+
+# Reminders
+[[on-window-detected]]
+    if.app-id = 'com.apple.reminders'
     run = 'layout floating'
 
 # Safari
