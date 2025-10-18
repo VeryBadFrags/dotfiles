@@ -33,7 +33,6 @@ plugins=(
   mise # https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/mise
   starship # https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/starship
   zoxide # https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/zoxide
-  zsh-syntax-highlighting # https://github.com/zsh-users/zsh-syntax-highlighting/blob/master/INSTALL.md#oh-my-zsh
   )
 
 source $ZSH/oh-my-zsh.sh
@@ -56,3 +55,6 @@ if [ "$(command -v carapace)" ]; then
 else
   echo "carapace not found"
 fi
+
+# zsh-syntax-highlighting - https://github.com/zsh-users/zsh-syntax-highlighting/blob/master/INSTALL.md#using-packages
+source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
