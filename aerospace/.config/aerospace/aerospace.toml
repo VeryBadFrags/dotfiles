@@ -219,6 +219,11 @@ automatically-unhide-macos-hidden-apps = false
     if.app-id = 'com.apple.reminders'
     run = 'layout floating'
 
+# Activity Monitor
+[[on-window-detected]]
+    if.app-id = 'com.apple.ActivityMonitor'
+    run = 'layout floating'
+
 # Safari
 [[on-window-detected]]
     if.app-id = 'com.apple.Safari'
