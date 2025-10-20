@@ -245,7 +245,6 @@ automatically-unhide-macos-hidden-apps = false
 # Messages
 [[on-window-detected]]
     if.app-id = 'com.apple.MobileSMS'
-    if.during-aerospace-startup = true
     run = ['move-node-to-workspace 3']
 
 # Discord
