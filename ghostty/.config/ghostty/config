@@ -3,6 +3,7 @@
 font-size = 18
 font-family = Hack Nerd Font
 theme = Catppuccin Macchiato
+macos-titlebar-style = tabs
 
 # Remove close confirmation prompt
 confirm-close-surface = false
