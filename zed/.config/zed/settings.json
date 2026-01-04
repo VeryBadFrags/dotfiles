@@ -8,6 +8,14 @@
 // from the command palette
 {
   // "ui_font_size": 16,
+  "languages": {
+    "Plain Text": {
+      "show_edit_predictions": false
+    }
+  },
+  "edit_predictions": {
+    "mode": "subtle"
+  },
   "features": {
     "edit_prediction_provider": "zed"
   },
