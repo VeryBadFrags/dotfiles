@@ -11,4 +11,5 @@ confirm-close-surface = false
 # Show/Hide Quake terminal
 keybind = global:option+space=toggle_quick_terminal
 
+# https://ghostty.org/docs/install/release-notes/1-2-0#ssh-improvements-%28work-in-progress%29
 shell-integration-features = ssh-env,ssh-terminfo
