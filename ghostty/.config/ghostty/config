@@ -10,3 +10,5 @@ confirm-close-surface = false
 
 # Show/Hide Quake terminal
 keybind = global:option+space=toggle_quick_terminal
+
+shell-integration-features = ssh-env,ssh-terminfo
